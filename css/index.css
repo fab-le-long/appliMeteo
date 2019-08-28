@@ -1,0 +1,290 @@
+/***************************************************************
+Homogénéité des "boîtes" HTML
+***************************************************************/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/*************************************************************** 
+Taille de police "responsive"
+***************************************************************/
+html {
+    font-size: 0.625em;
+    font-size: calc(1em * 0.625);
+}
+
+body {
+    font-size: 1.6em;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/***************************************************************
+STYLES GENERAUX
+***************************************************************/
+body,
+header,
+section,
+footer {
+    color: aliceblue;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: capitalize;
+    font-size: 1.3em;
+}
+
+h1,
+h2,
+h3 {
+    text-shadow: 3px 3px 6px black;
+}
+
+h1 {
+    margin: 20px auto;
+}
+
+h2 {
+    padding-top: 25px;
+    margin: 10px auto;
+}
+
+h3 {
+    margin: 0 auto;
+}
+
+
+
+/***************************************************************
+BODY ET BACKGROUNDS WEATHER
+***************************************************************/
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.neige {
+    background-image: url(../img/bg/neige.jpg);
+}
+
+.orage {
+    background-image: url(../img/bg/orage.jpg);
+}
+
+.pluie {
+    background-image: url(../img/bg/pluie.jpg);
+}
+
+.nuage {
+    background-image: url(../img/bg/nuage.jpg);
+}
+
+.peuNuage {
+    background-image: url(../img/bg/peuNuage.jpg);
+}
+
+.sun {
+    background-image: url(../img/bg/sunny-day.jpg);
+}
+
+.canicule {
+    background-image: url(../img/bg/canicule.jpg);
+}
+
+.default {
+    background-image: url(../img/bg/default.jpg);
+}
+
+
+/***************************************************************
+INPUT
+***************************************************************/
+
+input {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    color: aliceblue;
+    width: 90%;
+    height: 30px;
+    font-size: 20px;
+}
+
+input:focus {
+    border: none;
+    box-shadow: 0px 2px 3px aliceblue, 2px 0px 3px aliceblue, 0px -2px 3px aliceblue, -2px 0px 3px aliceblue;
+}
+
+/***************************************************************
+WEATHER DAY INFOS
+***************************************************************/
+
+#day-info {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    margin: 30px auto;
+    height: 360px;
+    width: 360px;
+}
+
+#info {
+    display: flex;
+    margin: 20px 60px;
+}
+
+#info img {
+    width: 18px;
+}
+
+.deg {
+    width: 50%;
+}
+
+.wind {
+    border-left: 1px solid aliceblue;
+    width: 50%;
+}
+
+#icon img {
+    width: 180px;
+}
+
+.marginCanicule {
+    margin-top: -25px;
+}
+
+/***************************************************************
+WEEK WEATHER INFOS
+***************************************************************/
+.datesContent {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 0 20px;
+    border-radius: 10px;
+}
+
+.datesContent ul {
+    list-style: none;
+    border-right: aliceblue solid 1px;
+    padding: 0;
+    width: 20%;
+}
+
+.datesContent ul:last-child {
+    border: none;
+}
+
+.datesContent ul li img {
+    width: 30px;
+}
+
+/*********EFFET CANICULE TEXTE***********/
+.chaud {
+    color: #FF9933;
+    text-shadow: 0px 0px 2px #ff0000,
+        0px 0px 4px #ff0000,
+        0px 0px 8px #e50000,
+        0px 0px 10px #e50000,
+        0px 0px 20px #b20000,
+        0px 0px 25px #b20000,
+        0px 0px 30px #7f0000,
+        0px 0px 35px #7f0000,
+        0px 0px 40px #7f0000,
+        0px 0px 45px #660000,
+        0px 0px 50px #660000,
+        0px 0px 55px #4c0000;
+}
+
+.pensez {
+    color: rgba(133, 207, 207, 0.8);
+    text-shadow: 2px 2px 3px rgba(185, 185, 185, 0.4),
+        0px 0px 5px #000000,
+        0px 0px 10px #000000,
+        0px 0px 15px #191919,
+        0px 0px 20px #323232,
+        0px 0px 25px #4c4c4c,
+        0px 0px 30px #666666;
+}
+
+
+
+/**************MEDIA QUERIES FOR TABLET****************/
+
+@media (min-width: 768px) {
+
+    body,
+    header,
+    section,
+    footer {
+        font-size: 1.6em;
+    }
+
+    input {
+        height: 40px;
+        font-size: 30px;
+    }
+
+    #day-info {
+        height: 550px;
+        width: 550px;
+        margin: 60px auto;
+    }
+
+    #icon img {
+        width: 260px;
+    }
+
+    #info {
+        margin: 50px;
+    }
+
+    #info img {
+        width: 24px;
+    }
+
+    .datesContent ul li img {
+        width: 60px;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    body {
+        max-width: 50vw;
+        font-size: 1.6em;
+    }
+
+    #info {
+        margin: 20px 80px;
+    }
+
+    #day-info {
+        height: 510px;
+        width: 510px;
+        margin: 25px auto;
+    }
+
+
+    .datesContent {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin: 0 20px;
+        border-radius: 10px;
+    }
+
+    .marginCanicule {
+        margin-bottom: -30px;
+    }
+
+}

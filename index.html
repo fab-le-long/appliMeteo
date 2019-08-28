@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <!--Bootstrap-->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!--Font Awsome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+
+    <!-- Mon css-->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>My météo</title>
+</head>
+
+<body class="default">
+    <div class="app">
+
+        <header>
+            <div>
+                <h1 id="date"></h1>
+                <form>
+                    <input type="search" name="search" id="search" placeholder="Rechercher une ville">
+                </form>
+            </div>
+        </header>
+
+        <section id="day-info">
+            <h2 id="city"></h2>
+
+            <div id="icon">
+                <img src="img/icon/soleil.png" alt="zone icone météo">
+
+            </div>
+
+            <h3 id="weather"><span class="chaud"></span><br><span></span>
+            </h3>
+
+            <div id="info">
+                <div class="deg">
+                    <img src="./img/deg&wind/thermometer.png">
+                    <span id="deg"></span>
+                </div>
+                <div class="wind">
+                    <img src="./img/deg&wind/breeze.png">
+                    <span id="wind"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="datesContent">
+
+                <!-- Contenu ajouté par JS -->
+                
+        </section>
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <!--Jquery-->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+        <!--Mon script-->
+        <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
